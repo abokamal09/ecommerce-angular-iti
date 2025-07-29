@@ -33,7 +33,8 @@ src/
 │   │   ├── checkout/
 │   │   └── auth/
 │   │       ├── login/
-│   │       └── register/
+│   │       ├── register/
+│   │       └── admin-panel/
 │   ├── shared/                 
 │   │   ├── header/
 │   │   └── footer/             
