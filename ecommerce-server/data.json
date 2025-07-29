@@ -1,22 +1,46 @@
 {
+  "categories": [
+    {
+      "id": 1,
+      "name": "phones"
+    },
+    {
+      "id": 2,
+      "name": "Laptops"
+    }
+  ],
   "products": [
     {
       "id": "1",
       "name": "nokia",
       "price": 1000,
-      "quantity": 10
+      "quantity": 10,
+      "imageurl" : "https://placehold.co/300x200",
+      "CatgoryId" : 1
+    },
+    {
+      "id": "4",
+      "name": "test",
+      "price": 1000,
+      "quantity": 0,
+      "imageurl" : "https://placehold.co/300x200",
+      "CatgoryId" : 1
     },
     {
       "id": "2",
-      "name": "tornado",
+      "name": "Dell",
       "price": 20000000,
-      "quantity": 20
+      "quantity": 20,
+      "imageurl" : "https://placehold.co/300x200",
+      "CatgoryId" : 2
     },
     {
       "id": "135c",
       "name": "iphone",
       "price": 200,
-      "quantity": 2
+      "quantity": 2,
+      "imageurl" : "https://placehold.co/300x200",
+      "CatgoryId" : 1
     }
   ]
 }
