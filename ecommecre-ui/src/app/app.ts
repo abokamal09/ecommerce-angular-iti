@@ -5,7 +5,7 @@ import { ProductPage } from './pages/product/product-page/product-page';
 @Component({
   selector: 'app-root',
   standalone:true,
-  imports: [RouterOutlet,ProductPage],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
