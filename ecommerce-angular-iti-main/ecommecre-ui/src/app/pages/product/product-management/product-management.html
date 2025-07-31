@@ -1,0 +1,45 @@
+<div class="container mt-4">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label>Name</label>
+      <input type="text" formControlName="name" class="form-control" />
+      <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched" class="text-danger">
+        Name is required (min 3 characters)
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Price</label>
+      <input type="number" formControlName="price" class="form-control" />
+      <div *ngIf="form.get('price')?.invalid && form.get('price')?.touched" class="text-danger">
+        Price is required and must be > 0
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Quantity</label>
+      <input type="number" formControlName="quantity" class="form-control" />
+      <div *ngIf="form.get('quantity')?.invalid && form.get('quantity')?.touched" class="text-danger">
+        Quantity is required and must be > 0
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Image URL</label>
+      <input type="text" formControlName="imageurl" class="form-control" />
+      <div *ngIf="form.get('imageurl')?.invalid && form.get('imageurl')?.touched" class="text-danger">
+        Image URL is required
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Category ID</label>
+      <input type="number" formControlName="categoryId" class="form-control" />
+      <div *ngIf="form.get('categoryId')?.invalid && form.get('categoryId')?.touched" class="text-danger">
+        Category ID is required and must be > 0
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Save</button>
+  </form>
+</div>
