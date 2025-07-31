@@ -14,7 +14,7 @@ interface Product {
   price: number;
   quantity: number;
   imageurl: string;
-  CatgoryId: number;
+  categoryId: number;
 }
 @Component({
   selector: 'app-product-page',
@@ -46,7 +46,7 @@ export class ProductPage implements OnInit {
     if (this.selectedCategoryId === 0) {
       this.filteredProducts = this.products;
     } else {
-      this.filteredProducts = this.products.filter(p => p.CatgoryId === +this.selectedCategoryId);
+      this.filteredProducts = this.products.filter(p => p.categoryId === +this.selectedCategoryId);
     }
   }
    selectCategory(id: number): void {
