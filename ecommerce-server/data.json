@@ -1,0 +1,76 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "phones"
+    },
+    {
+      "id": "2",
+      "name": "Laptops"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "nokia",
+      "price": 1000,
+      "quantity": 10,
+      "imageurl": "https://placehold.co/300x200",
+      "CatgoryId": 1
+    },
+    {
+      "id": "4",
+      "name": "test",
+      "price": 1000,
+      "quantity": 0,
+      "imageurl": "https://placehold.co/300x200",
+      "CatgoryId": 1
+    },
+    {
+      "id": "2",
+      "name": "Dell",
+      "price": 20000000,
+      "quantity": 20,
+      "imageurl": "https://placehold.co/300x200",
+      "CatgoryId": 2
+    },
+    {
+      "id": "135c",
+      "name": "iphone",
+      "price": 200,
+      "quantity": 2,
+      "imageurl": "https://placehold.co/300x200",
+      "CatgoryId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Ahmed Kamal",
+      "email": "ahmed@example.com",
+      "password": "123456",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "name": "Sarah Mostafa",
+      "email": "sarah@example.com",
+      "password": "password123",
+      "role": "user"
+    },
+    {
+      "id": "3",
+      "name": "Omar Ali",
+      "email": "omar@example.com",
+      "password": "omarpass",
+      "role": "user"
+    },
+    {
+      "id": "b286",
+      "name": "test",
+      "email": "test@test.com",
+      "password": "test.123",
+      "role": "user"
+    }
+  ]
+}
