@@ -11,7 +11,8 @@ import ProductManagement from './pages/product/product-management/product-manage
 
 
 export const routes: Routes = [
-  {path:'',component: Home},
+  {path:'',redirectTo: '/home', pathMatch: 'full'},
+  {path:'home',component: Home},
   { path: 'product-page', component: ProductPage },
   { path: 'product/:id', component: ProductDetails },
   { path: 'register', component: Register },
