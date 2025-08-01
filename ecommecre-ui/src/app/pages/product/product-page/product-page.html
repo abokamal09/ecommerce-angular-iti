@@ -2,7 +2,7 @@
 
   <h2 class="text-center mb-5 fw-bold fs-1">Products</h2>
 
-  <div class="dropdown mb-5 text-center">
+  <div class="dropdown mb-4 text-center">
     <button class="btn btn-dark dropdown-toggle px-4 py-2 rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       {{ getCategoryName(selectedCategoryId) }}
     </button>
@@ -16,8 +16,18 @@
     </ul>
   </div>
 
+  <div class="text-center mb-4">
+  <input
+    type="text"
+    class="form-control w-50 mx-auto rounded-pill shadow-sm"
+    placeholder="Search products..."
+    [(ngModel)]="searchTerm"
+    (input)="filterProducts()"
+  />
+</div>
+
   <div class="row justify-content-center">
-    <div class="col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let product of filteredProducts">
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let product of paginatedProducts">
       <a [routerLink]="['/product', product.id]" class="text-decoration-none text-dark">
         <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
         <div class="overflow-hidden">
@@ -35,5 +45,34 @@
       </a>
     </div>
   </div>
+
+  <div class="text-center mt-4">
+  <button
+    class="btn btn-outline-dark mx-1"
+    [disabled]="currentPage === 1"
+    (click)="goToPage(currentPage - 1)">
+    Previous
+  </button>
+
+  <button
+  class="btn mx-1"
+  *ngFor="let page of totalPages"
+  [ngClass]="{
+    'btn-dark': currentPage === page,
+    'btn-outline-dark': currentPage !== page
+  }"
+  (click)="goToPage(page)">
+  {{ page }}
+</button>
+
+
+  <button
+    class="btn btn-outline-dark mx-1"
+    [disabled]="currentPage === totalPages.length"
+    (click)="goToPage(currentPage + 1)">
+    Next
+  </button>
+</div>
+
 
 </div>
