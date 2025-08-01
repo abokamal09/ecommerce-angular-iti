@@ -27,7 +27,7 @@ export default class ProductManagement implements OnInit {
       price: [0, [Validators.required, Validators.min(1)]],
       quantity: [0, [Validators.required, Validators.min(1)]],
       imageurl: ['', [Validators.required]],
-     categoryId: [0, [Validators.required, Validators.min(1)]],
+      categoryId: [0, [Validators.required, Validators.min(1)]],
     });
   }
 
@@ -47,10 +47,12 @@ export default class ProductManagement implements OnInit {
 
     if (this.productId) {
       this.productService.updateProduct(this.productId, product).subscribe(() => {
+        alert('Product updated successfully');
         this.router.navigate(['/admin-panel']);
       });
     } else {
       this.productService.addProduct(product).subscribe(() => {
+        alert('Product added successfully');
         this.router.navigate(['/admin-panel']);
       });
     }
