@@ -8,7 +8,7 @@ interface Product {
   price: number;
   quantity: number;
   imageurl: string;
-  CatgoryId: number;
+  catgoryId: number;
 }
 @Component({
   selector: 'app-product-details',
