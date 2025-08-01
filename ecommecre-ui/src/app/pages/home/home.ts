@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ThemeService } from '../../services/theme.service';
-import { Subscription } from 'rxjs';
-import { CommonModule } from '@angular/common';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -11,25 +11,14 @@ import { CommonModule } from '@angular/common';
   templateUrl: './home.html',
   styleUrls: ['./home.css']
 })
-export class Home implements OnInit, OnDestroy {
-  currentTheme: 'light' | 'dark' = 'dark';
-  private themeSubscription: Subscription | undefined;
+export class Home {
+  currentTheme$: Observable<'light' | 'dark'>;
 
   constructor(
     private router: Router,
     private themeService: ThemeService
-  ) {}
-
-  ngOnInit() {
-    this.themeSubscription = this.themeService.theme$.subscribe(theme => {
-      this.currentTheme = theme;
-    });
-  }
-
-  ngOnDestroy() {
-    if (this.themeSubscription) {
-      this.themeSubscription.unsubscribe();
-    }
+  ) {
+    this.currentTheme$ = this.themeService.theme$;
   }
 
   goToProducts() {
