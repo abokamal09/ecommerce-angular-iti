@@ -1,0 +1,22 @@
+.checkout-container input,
+.checkout-container select {
+  height: 48px;
+}
+
+.checkout-container input::placeholder {
+  color: #888;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 6px 8px;
+}
+
+.bay-btn {
+  background: black;
+  color: white;
+  padding: 12px 100px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}

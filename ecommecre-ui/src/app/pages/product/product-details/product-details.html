@@ -39,13 +39,22 @@
         Not enough in stock.
       </div>
 
-      <!-- Add to Cart Button -->
+      <!-- Add to CartService Button -->
       <button
         class="btn btn-dark px-5 py-3 fs-5"
         [disabled]="selectedQuantity > product.quantity || product.quantity === 0"
-        (click)="addToCart()">
+        (click)="addToCart(product)">
         🛒 Add to cart
       </button>
     </div>
+
+    <app-cart-popup
+      [itemName]="product.name"
+      [itemPrice]="product.price"
+      [imageUrl]="product.imageurl"
+      [show]="showPopup"
+      (close)="showPopup = false">
+    </app-cart-popup>
+
   </div>
 </div>

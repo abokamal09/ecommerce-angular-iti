@@ -84,6 +84,15 @@
   transition: opacity 0.2s ease;
 }
 
+.cart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
 .login-icon:hover {
   opacity: 1;
 }
@@ -140,21 +149,21 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  
+
   .logo {
     order: 1;
   }
-  
+
   .persistent-actions {
     order: 2;
     margin-left: auto;
   }
-  
+
   .mobile-menu-btn {
     display: flex;
     margin-left: 1rem;
   }
-  
+
   .nav-links {
     display: none;
     width: 100%;
@@ -163,20 +172,20 @@
     transition: all 0.3s ease-in-out;
     padding: 1rem 0;
   }
-  
+
   .nav-links.active {
     display: flex;
     transition: all 0.3s ease-in-out;
   }
-  
+
   .nav-links a {
     padding: 0.5rem 0;
   }
-  
+
   .nav-actions {
     display: none;
   }
-  
+
   .nav-actions.active {
     display: flex;
     width: 100%;

@@ -2,6 +2,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {CartService} from '../../../services/cart.service';
+import {CartPopup} from '../../cart/cart-popup/cart-popup';
+import {CartItem} from '../../../core/models/CartItem';
 interface Product {
   id: string;
   name: string;
@@ -12,17 +15,23 @@ interface Product {
 }
 @Component({
   selector: 'app-product-details',
-  imports: [CommonModule],
+  imports: [CommonModule, CartPopup],
   templateUrl: './product-details.html',
   styleUrl: './product-details.css'
 })
 export class ProductDetails implements OnInit{
+
   product: Product | null = null;
   selectedQuantity: number = 1;
-  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+  showPopup = false;
+
+
+  constructor(private route: ActivatedRoute, private http: HttpClient, private cartService: CartService) {}
 
   ngOnInit(): void {
+
     const productId = this.route.snapshot.paramMap.get('id');
+
     this.http.get<Product[]>('http://localhost:3000/products').subscribe(data => {
       this.product = data.find(p => p.id === productId) || null;
     });
@@ -38,7 +47,15 @@ export class ProductDetails implements OnInit{
       this.selectedQuantity--;
     }
   }
-  addToCart():void{
-
+  addToCart(product: Product): void {
+    const item: CartItem = {
+      name: product.name,
+      price: product.price,
+      imageUrl: product.imageurl,
+      quantity: this.selectedQuantity
+    };
+    this.showPopup = true;
+    this.cartService.addItem(item)
+    setTimeout(() => this.showPopup = false, 5000);
   }
 }

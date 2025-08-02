@@ -1,0 +1,20 @@
+<div class="popup" *ngIf="show">
+  <div class="header">
+    <span class="check">✔</span>
+    <span>Item added to your cart</span>
+    <span class="close" (click)="close.emit()">✕</span>
+  </div>
+
+  <div class="product">
+    <img [src]="imageUrl" alt="Product" />
+    <div class="info">
+      <div class="name">{{ itemName }}</div>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <button class="view-cart" (click)="goToCart()">View cart</button>
+    <button class="checkout" (click)="goToCheckout()">Check out</button>
+    <div class="continue"><a href="/product">Continue shopping</a></div>
+  </div>
+</div>

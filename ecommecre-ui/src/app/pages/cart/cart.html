@@ -1,1 +1,37 @@
-<p>cart works!</p>
+<div class="cart-container">
+  <h2>Your cart</h2>
+  <a class="continue-shopping" href="/">Continue shopping</a>
+  <table class="cart-table">
+    <thead>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of items; index as i">
+      <td class="product-details">
+        <img [src]="item.imageUrl" alt="{{ item.name }}" />
+        <div>
+          <strong>{{ item.name }}</strong>
+          LE {{ item.price }}
+        </div>
+      </td>
+      <td class="quantity-control">
+        <button (click)="decrease(i)">−</button>
+        <span>{{ item.quantity }}</span>
+        <button (click)="increase(i)">+</button>
+        <span class="delete" (click)="remove(i)">🗑️</span>
+      </td>
+      <td>LE {{ item.price * item.quantity }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="checkout-section">
+    <p><strong>Estimated total</strong> LE {{ getTotal() }} EGP</p>
+    <p class="tax-note">Taxes, discounts and shipping calculated at checkout.</p>
+    <button (click)="goToCheckout()" class="checkout-btn">Check out</button>
+  </div>
+</div>
+

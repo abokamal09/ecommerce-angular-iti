@@ -50,8 +50,23 @@ src/
 └── index.html
 ```
 
+## 👥 Team Tasks
+
+
+| Task                            | Assigned To    | Status         |
+|---------------------------------|----------------|----------------|
+| Cart & Checkout                 | Ahmed Sameh    | ✅ Done  |
+| Product & Product-Details       | Mostafa Mahmoud | ✅ Done         |
+| Login & Register                | Ahmed Kamal    | ✅ Done |
+| Header & Footer                 | Moaz Rafat     | ✅ Done |
+| Admin Panel & Home              | Sara Fouad     | ✅ Done  |
+
+---
+
 ## 📦 How to Run
 
 ```bash
 npm install
+
 ng serve
+

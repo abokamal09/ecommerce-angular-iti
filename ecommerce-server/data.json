@@ -1,136 +1,144 @@
 {
   "categories": [
-  {
-    "id": "1",
-    "name": "phones"
-  },
-  {
-    "id": "2",
-    "name": "Laptops"
-  },
-  {
-    "id": "3",
-    "name": "headphones"
-  },
-  {
-    "id": "4",
-    "name": "smart watches"
-  }
-],
+    {
+      "id": "1",
+      "name": "phones"
+    },
+    {
+      "id": "2",
+      "name": "Laptops"
+    },
+    {
+      "id": "3",
+      "name": "headphones"
+    },
+    {
+      "id": "4",
+      "name": "smart watches"
+    }
+  ],
   "products": [
-  {
-    "id": "135c",
-    "name": "iPhone 15 Pro",
-    "price": 60000,
-    "quantity": 5,
-    "imageurl": "https://m.media-amazon.com/images/I/81KOaMd4-6L._AC_UY218_.jpg",
-    "categoryId": 1
-  },
-  {
-    "id": "28c1",
-    "name": "Samsung Galaxy S23",
-    "price": 40000,
-    "quantity": 1,
-    "imageurl": "https://m.media-amazon.com/images/I/51l6YHB2x4L._AC_UY218_.jpg",
-    "categoryId": 1
-  },
-  {
-    "id": "p3",
-    "name": "Xiaomi Redmi Note 13",
-    "price": 15000,
-    "quantity": 10,
-    "imageurl": "https://m.media-amazon.com/images/I/4109pOxZ3eL._AC_.jpg",
-    "categoryId": 1
-  },
-  {
-    "id": "p4",
-    "name": "Google Pixel 8",
-    "price": 38000,
-    "quantity": 0,
-    "imageurl": "https://m.media-amazon.com/images/I/61DQRUHhvDL._AC_UY218_.jpg",
-    "categoryId": 1
-  },
-  {
-    "id": "lap01",
-    "name": "MacBook Air M2",
-    "price": 85000,
-    "quantity": 7,
-    "imageurl": "https://m.media-amazon.com/images/I/71TegifDX+L._AC_UY218_.jpg",
-    "categoryId": 2
-  },
-  {
-    "id": "lap02",
-    "name": "HP Spectre x360",
-    "price": 65000,
-    "quantity": 3,
-    "imageurl": "https://m.media-amazon.com/images/I/619KiQwEbZL._AC_UY218_.jpg",
-    "categoryId": 2
-  },
-  {
-    "id": "lap03",
-    "name": "Dell XPS 13",
-    "price": 70000,
-    "quantity": 5,
-    "imageurl": "https://m.media-amazon.com/images/I/71ox5Ij+88L._AC_UY218_.jpg",
-    "categoryId": 2
-  },
-  {
-    "id": "hp01",
-    "name": "Sony WH-1000XM5",
-    "price": 12000,
-    "quantity": 8,
-    "imageurl": "https://m.media-amazon.com/images/I/61C1fqgB-1L._AC_UY218_.jpg",
-    "categoryId": 3
-  },
-  {
-    "id": "hp02",
-    "name": "AirPods Max",
-    "price": 14500,
-    "quantity": 1,
-    "imageurl": "https://m.media-amazon.com/images/I/81jqUPkIVRL._AC_UY218_.jpg",
-    "categoryId": 3
-  },
-  {
-    "id": "hp03",
-    "name": "JBL Tune 760NC",
-    "price": 4500,
-    "quantity": 12,
-    "imageurl": "https://m.media-amazon.com/images/I/51V1bf76cML._AC_UY218_.jpg",
-    "categoryId": 3
-  },
-  {
-    "id": "hp04",
-    "name": "Beats Studio3",
-    "price": 10000,
-    "quantity": 6,
-    "imageurl": "https://m.media-amazon.com/images/I/515FE+S4yLL._AC_UY218_.jpg",
-    "categoryId": 3
-  },
-  {
-    "id": "sw01",
-    "name": "Apple Watch Series 9",
-    "price": 20000,
-    "quantity": 6,
-    "imageurl": "https://m.media-amazon.com/images/I/61TAu9P0gRL._AC_UY218_.jpg",
-    "categoryId": 4
-  },
-  {
-    "id": "sw02",
-    "name": "Samsung Galaxy Watch 6",
-    "price": 16000,
-    "quantity": 1,
-    "imageurl": "https://m.media-amazon.com/images/I/61D1af1+kPL._AC_UY218_.jpg",
-    "categoryId": 4
-  },
-  {
-    "id": "sw03",
-    "name": "Huawei Watch GT 4",
-    "price": 12000,
-    "quantity": 9,
-    "imageurl": "https://m.media-amazon.com/images/I/717hhNCq3jL._AC_UY218_.jpg",
-    "categoryId": 4
-  }
-],
+    {
+      "id": "135c",
+      "name": "iPhone 15 Pro",
+      "price": 60000,
+      "quantity": 5,
+      "imageurl": "https://m.media-amazon.com/images/I/81KOaMd4-6L._AC_UY218_.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": "28c1",
+      "name": "Samsung Galaxy S23",
+      "price": 40000,
+      "quantity": 1,
+      "imageurl": "https://m.media-amazon.com/images/I/51l6YHB2x4L._AC_UY218_.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": "p3",
+      "name": "Xiaomi Redmi Note 13",
+      "price": 15000,
+      "quantity": 10,
+      "imageurl": "https://m.media-amazon.com/images/I/4109pOxZ3eL._AC_.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": "p4",
+      "name": "Google Pixel 8",
+      "price": 38000,
+      "quantity": 0,
+      "imageurl": "https://m.media-amazon.com/images/I/61DQRUHhvDL._AC_UY218_.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": "lap01",
+      "name": "MacBook Air M2",
+      "price": 85000,
+      "quantity": 7,
+      "imageurl": "https://m.media-amazon.com/images/I/71TegifDX+L._AC_UY218_.jpg",
+      "categoryId": 2
+    },
+    {
+      "id": "lap02",
+      "name": "HP Spectre x360",
+      "price": 65000,
+      "quantity": 3,
+      "imageurl": "https://m.media-amazon.com/images/I/619KiQwEbZL._AC_UY218_.jpg",
+      "categoryId": 2
+    },
+    {
+      "id": "lap03",
+      "name": "Dell XPS 13",
+      "price": 70000,
+      "quantity": 5,
+      "imageurl": "https://m.media-amazon.com/images/I/71ox5Ij+88L._AC_UY218_.jpg",
+      "categoryId": 2
+    },
+    {
+      "id": "hp01",
+      "name": "Sony WH-1000XM5",
+      "price": 12000,
+      "quantity": 8,
+      "imageurl": "https://m.media-amazon.com/images/I/61C1fqgB-1L._AC_UY218_.jpg",
+      "categoryId": 3
+    },
+    {
+      "id": "hp02",
+      "name": "AirPods Max",
+      "price": 14500,
+      "quantity": 1,
+      "imageurl": "https://m.media-amazon.com/images/I/81jqUPkIVRL._AC_UY218_.jpg",
+      "categoryId": 3
+    },
+    {
+      "id": "hp03",
+      "name": "JBL Tune 760NC",
+      "price": 4500,
+      "quantity": 12,
+      "imageurl": "https://m.media-amazon.com/images/I/51V1bf76cML._AC_UY218_.jpg",
+      "categoryId": 3
+    },
+    {
+      "id": "hp04",
+      "name": "Beats Studio3",
+      "price": 10000,
+      "quantity": 6,
+      "imageurl": "https://m.media-amazon.com/images/I/515FE+S4yLL._AC_UY218_.jpg",
+      "categoryId": 3
+    },
+    {
+      "id": "sw01",
+      "name": "Apple Watch Series 9",
+      "price": 20000,
+      "quantity": 6,
+      "imageurl": "https://m.media-amazon.com/images/I/61TAu9P0gRL._AC_UY218_.jpg",
+      "categoryId": 4
+    },
+    {
+      "id": "sw02",
+      "name": "Samsung Galaxy Watch 6",
+      "price": 16000,
+      "quantity": 1,
+      "imageurl": "https://m.media-amazon.com/images/I/61D1af1+kPL._AC_UY218_.jpg",
+      "categoryId": 4
+    },
+    {
+      "id": "sw03",
+      "name": "Huawei Watch GT 4",
+      "price": 12000,
+      "quantity": 9,
+      "imageurl": "https://m.media-amazon.com/images/I/717hhNCq3jL._AC_UY218_.jpg",
+      "categoryId": 4
+    },
+    {
+      "id": "5427",
+      "name": "dgd",
+      "price": 2000,
+      "quantity": 4,
+      "imageurl": "https://www.redragonzone.com/products/redragon-gaming-pc-case-gc-520",
+      "categoryId": 3
+    }
+  ],
   "users": [
     {
       "id": "1",

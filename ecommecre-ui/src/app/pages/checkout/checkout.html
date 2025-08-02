@@ -1,1 +1,91 @@
-<p>checkout works!</p>
+<div class="checkout-container container my-5">
+  <div class="row">
+
+    <!-- Left form side -->
+    <div class="col-md-7">
+      <h5 class="fw-bold mb-4">Contact</h5>
+      <input class="form-control mb-3" placeholder="Email or mobile phone number" required/>
+
+      <h5 class="fw-bold mb-3">Delivery</h5>
+      <select class="form-select mb-3">
+        <option selected>Egypt</option>
+      </select>
+
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control mb-3" placeholder="First name" required/>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control mb-3" placeholder="Last name" required/>
+        </div>
+      </div>
+
+      <input class="form-control mb-3" placeholder="Address" required/>
+      <input class="form-control mb-3" placeholder="Apartment, suite, etc. (optional)" required />
+
+      <div class="row">
+        <div class="col">
+          <input class="form-control mb-3" placeholder="City" required />
+        </div>
+        <div class="col">
+          <input class="form-control mb-3" placeholder="Governorate" required/>
+        </div>
+        <div class="col">
+          <input class="form-control mb-3" placeholder="Postal code (optional)" required/>
+        </div>
+      </div>
+
+      <input class="form-control mb-3" placeholder="Phone" required/>
+
+
+      <h5 class="fw-bold mb-3">Shipping method</h5>
+      <div class="border p-3 rounded mb-4 bg-light d-flex justify-content-between align-items-center">
+        <div>
+          <strong>Delivery fees</strong>
+        </div>
+        <div class="fw-bold">E£{{ shippingCost }}.00</div>
+      </div>
+
+      <h5 class="fw-bold mb-3">Payment</h5>
+      <div class="border p-3 rounded mb-4 bg-light">
+        <strong>Cash on Delivery (COD)</strong>
+      </div>
+      <div>
+        <button type="submit" (click)="completeOrder()" class="bay-btn">Bay</button>
+      </div>
+    </div>
+
+    <!-- Right cart summary -->
+
+    <div class="col-md-5">
+      <div class="bg-white p-4 rounded-4 shadow-sm border">
+
+        <!-- Cart Items -->
+        <div *ngFor="let item of cartItems" class="d-flex mb-4 align-items-start">
+          <!-- Product Image -->
+          <div class="position-relative me-3">
+            <img [src]="item.image" alt="item" class="rounded-2 border"
+                 style="width: 72px; height: 72px; object-fit: cover;" />
+            <span class="badge bg-dark text-white position-absolute top-0 start-100 translate-middle rounded-circle px-2">
+          {{ item.quantity }}
+        </span>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between mb-2 text-muted">
+          <span>Subtotal ({{ cartItems.length }} items)</span>
+          <span>E£{{ subtotal.toFixed(2) }}</span>
+        </div>
+        <div class="d-flex justify-content-between mb-2 text-muted">
+          <span>Delivery fees</span>
+          <span>E£{{ shippingCost.toFixed(2) }}</span>
+        </div>
+        <hr />
+        <div class="d-flex justify-content-between fw-bold fs-5">
+          <span>Total</span>
+          <span class="text-primary">E£{{ total.toFixed(2) }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

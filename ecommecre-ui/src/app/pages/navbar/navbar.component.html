@@ -8,10 +8,10 @@
           <path d="M10.7 21.3L21.3 10.7C21.9 10.1 22.8 10.1 23.4 10.7C24 11.3 24 12.2 23.4 12.8L12.8 23.4C12.2 24 11.3 24 10.7 23.4C10.1 22.8 10.1 21.9 10.7 21.3Z" [attr.fill]="currentTheme === 'dark' ? '#333' : '#555'"/>
           <path d="M10.7 10.7L21.3 21.3C21.9 21.9 22.8 21.9 23.4 21.3C24 20.7 24 19.8 23.4 19.2L12.8 8.6C12.2 8 11.3 8 10.7 8.6C10.1 9.2 10.1 10.1 10.7 10.7Z" [attr.fill]="currentTheme === 'dark' ? '#333' : '#555'"/>
         </svg>
-        <span>Ecommerce App</span>
+        <span>Team1 Store</span>
       </a>
     </div>
-    
+
     <!-- Right side actions that stay visible -->
     <div class="persistent-actions">
       <a routerLink="/login" class="login-icon">
@@ -19,7 +19,13 @@
           <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" [attr.fill]="currentTheme === 'dark' ? 'white' : 'black'"/>
         </svg>
       </a>
-      
+
+      <a routerLink="/cart" class="cart-icon">
+        <svg xmlns="http://www.w3.org/2000/svg"  width="23" height="23" viewBox="0 0 23 23" fill="none" >
+          <path fill="currentColor" d="M0 1h4.764l.545 2h18.078l-3.666 11H7.78l-.5 2H22v2H4.72l1.246-4.989L3.236 3H0V1Zm7.764 11h10.515l2.334-7H5.855l1.909 7ZM4 21a2 2 0 1 1 4 0a2 2 0 0 1-4 0Zm14 0a2 2 0 1 1 4 0a2 2 0 0 1-4 0Z"/>
+        </svg>
+      </a>
+
       <!-- Mobile menu button -->
       <button class="mobile-menu-btn" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Toggle menu">
         <span class="bar"></span>
@@ -27,16 +33,16 @@
         <span class="bar"></span>
       </button>
     </div>
-    
+
     <!-- Navigation links with mobile support -->
     <div class="nav-links" [class.active]="isMenuOpen">
       <a routerLink="/home" [routerLinkActive]="'active'">Home</a>
-      <a routerLink="/products" [routerLinkActive]="'active'">Products</a>
+      <a routerLink="/product-page" [routerLinkActive]="'active'">Products</a>
       <a routerLink="/categories" [routerLinkActive]="'active'">Categories</a>
       <a routerLink="/orders" [routerLinkActive]="'active'">Orders</a>
       <a routerLink="/users" [routerLinkActive]="'active'">Users</a>
     </div>
-    
+
     <!-- Right side actions that collapse on mobile -->
     <!-- <div class="nav-actions" [class.active]="isMenuOpen">
       <a routerLink="/download" class="download-btn">Download</a>
