@@ -7,11 +7,8 @@ import { Home } from './pages/home/home';
 import { AdminPanelComponent } from './pages/auth/admin-panel/admin-panel'; 
 import ProductManagement from './pages/product/product-management/product-management';
 
-
-
-
 export const routes: Routes = [
-  { path: 'home', component: Home },
+  { path: 'Home', component: Home },
   { path: 'product-page', component: ProductPage },
   { path: 'product/:id', component: ProductDetails },
   { path: 'register', component: Register },
@@ -19,7 +16,5 @@ export const routes: Routes = [
   { path: 'admin-panel', component: AdminPanelComponent },
   { path: 'product-management', component: ProductManagement },
   { path: 'product-management/:id', component: ProductManagement },
-  { path: '', redirectTo: '/admin-panel', pathMatch: 'full' }
+  { path: '', redirectTo: '/Home', pathMatch: 'full' }
 ];
-
-
