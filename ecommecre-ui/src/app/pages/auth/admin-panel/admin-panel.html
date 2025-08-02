@@ -1,20 +1,19 @@
 <div class="container mt-4">
   <h2>Products Management</h2>
 
- <div class="row mb-3">
-  <div class="col-12 col-sm-9 mb-2 mb-sm-0">
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Search by name, ID, or category"
-      [(ngModel)]="searchText"
-    />
+  <div class="row mb-3">
+    <div class="col-12 col-sm-9 mb-2 mb-sm-0">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by name, ID, or category"
+        [(ngModel)]="searchText"
+      />
+    </div>
+    <div class="col-12 col-sm-3">
+      <button class="btn btn-sm btn-info w-100" type="button" (click)="search()">Search</button>
+    </div>
   </div>
-  <div class="col-12 col-sm-3">
-    <button class="btn btn-sm btn-info w-100" type="button" (click)="search()">Search</button>
-  </div>
-</div>
-
 
   <button class="btn btn-primary mb-3" (click)="addProduct()">Add Product</button>
 
@@ -32,11 +31,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let product of filteredProducts">
+        <tr
+          *ngFor="let product of filteredProducts"
+          [ngClass]="{ 'table-danger': product.quantity === 0 }"
+        >
           <td>{{ product.id }}</td>
           <td>{{ product.name }}</td>
           <td>{{ product.price }}</td>
-          <td>{{ product.quantity }}</td>
+          <td>
+            {{ product.quantity }}
+            <span *ngIf="product.quantity === 0" class="text-danger fw-bold"> (Out of stock)</span>
+          </td>
           <td>{{ product.categoryId }}</td>
           <td>
             <img [src]="product.imageurl" alt="{{ product.name }}" width="80" />
