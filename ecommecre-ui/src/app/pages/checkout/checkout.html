@@ -64,7 +64,7 @@
         <div *ngFor="let item of cartItems" class="d-flex mb-4 align-items-start">
           <!-- Product Image -->
           <div class="position-relative me-3">
-            <img [src]="item.image" alt="item" class="rounded-2 border"
+            <img [src]="item.imageUrl" alt="item" class="rounded-2 border"
                  style="width: 72px; height: 72px; object-fit: cover;" />
             <span class="badge bg-dark text-white position-absolute top-0 start-100 translate-middle rounded-circle px-2">
           {{ item.quantity }}

@@ -2,10 +2,13 @@ import {Component, OnInit} from '@angular/core';
 import {CartItem} from '../../core/models/CartItem';
 import {CartService} from '../../services/cart.service';
 import {Router} from '@angular/router';
+import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-checkout',
-  imports: [],
+  imports: [
+    NgForOf
+  ],
   templateUrl: './checkout.html',
   styleUrl: './checkout.css'
 })
