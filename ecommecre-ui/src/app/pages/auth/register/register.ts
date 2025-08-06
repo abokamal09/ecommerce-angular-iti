@@ -51,10 +51,9 @@ export class Register {
 
     this.authService.registerUser(newUser).subscribe({
       next: (user) => {
-        localStorage.setItem('user', JSON.stringify(user));
-        this.router.navigate(['/']); // روح للهوم
+        this.router.navigate(['/']);
       },
-      error: (err) => {
+      error: () => {
         this.errorMessage = 'Registration failed. Please try again.';
       },
     });

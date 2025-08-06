@@ -1,6 +1,5 @@
 <nav class="navbar">
   <div class="container">
-    <!-- Logo section -->
     <div class="logo">
       <a routerLink="/">
         <svg class="cursor-logo" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -12,21 +11,28 @@
       </a>
     </div>
 
-    <!-- Right side actions that stay visible -->
     <div class="persistent-actions">
-      <a routerLink="/login" class="login-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" [attr.fill]="currentTheme === 'dark' ? 'white' : 'black'"/>
-        </svg>
-      </a>
+      <ng-container *ngIf="!currentUser; else loggedInBlock">
+        <a routerLink="/login" class="login-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" [attr.fill]="currentTheme === 'dark' ? 'white' : 'black'"/>
+          </svg>
+        </a>
+      </ng-container>
+
+      <ng-template #loggedInBlock>
+        <div class="d-flex align-items-center gap-2 ms-2">
+          <span class="text-primary fw-semibold">{{ currentUser?.name }}</span>
+          <button class="btn btn-sm btn-outline-danger" (click)="logout()">Logout</button>
+        </div>
+      </ng-template>
 
       <a routerLink="/cart" class="cart-icon">
-        <svg xmlns="http://www.w3.org/2000/svg"  width="23" height="23" viewBox="0 0 23 23" fill="none" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
           <path fill="currentColor" d="M0 1h4.764l.545 2h18.078l-3.666 11H7.78l-.5 2H22v2H4.72l1.246-4.989L3.236 3H0V1Zm7.764 11h10.515l2.334-7H5.855l1.909 7ZM4 21a2 2 0 1 1 4 0a2 2 0 0 1-4 0Zm14 0a2 2 0 1 1 4 0a2 2 0 0 1-4 0Z"/>
         </svg>
       </a>
 
-      <!-- Mobile menu button -->
       <button class="mobile-menu-btn" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Toggle menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -34,18 +40,13 @@
       </button>
     </div>
 
-    <!-- Navigation links with mobile support -->
     <div class="nav-links" [class.active]="isMenuOpen">
-      <a routerLink="/home" [routerLinkActive]="'active'">Home</a>
-      <a routerLink="/product-page" [routerLinkActive]="'active'">Products</a>
-      <a routerLink="/categories" [routerLinkActive]="'active'">Categories</a>
-      <a routerLink="/orders" [routerLinkActive]="'active'">Orders</a>
-      <a routerLink="/users" [routerLinkActive]="'active'">Users</a>
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      <a routerLink="/product-page" routerLinkActive="active">Products</a>
+      <!-- <a routerLink="/categories" routerLinkActive="active">Categories</a>
+      <a routerLink="/orders" routerLinkActive="active">Orders</a>
+      <a routerLink="/users" routerLinkActive="active">Users</a> -->
+      <a *ngIf="isAdmin" routerLink="/admin-panel" routerLinkActive="active">Dashboard</a>
     </div>
-
-    <!-- Right side actions that collapse on mobile -->
-    <!-- <div class="nav-actions" [class.active]="isMenuOpen">
-      <a routerLink="/download" class="download-btn">Download</a>
-    </div> -->
   </div>
 </nav>

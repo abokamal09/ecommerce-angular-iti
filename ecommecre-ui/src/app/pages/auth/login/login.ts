@@ -43,7 +43,6 @@ export class Login {
 
     this.authService.login(email, password).subscribe((user: IUser | null) => {
       if (user) {
-        localStorage.setItem('user', JSON.stringify(user));
         this.router.navigate(['/']);
       } else {
         this.errorMessage = 'Invalid email or password';
